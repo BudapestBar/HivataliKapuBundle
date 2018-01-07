@@ -1,0 +1,36 @@
+
+    
+services:
+
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\:
+        resource: '../../../../../../../src/BudapestBar/Bundle/HivataliKapu/HivataliKapuBundle/*'
+        # you can exclude directories or files
+        # but if a service is unused, it's removed anyway
+        exclude: '../../../../../../../src/BudapestBar/Bundle/HivataliKapu/HivataliKapuBundle/{Entity,Repository,Model,Tests}'
+
+    BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Client:
+        shared: false
+        public: false
+        arguments: 
+            $url: "%hivatali_kapu.url%"
+
+
+    BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\Azonositas:
+        public: true
+
+    BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\TrKodEllenorzes:
+        public: true
+        arguments: ['@BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Client', "BUK01", "BUK01", "YhEGV9wj"]
+
+    
+    BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\EventListener\HivataliKapuSubscriber:
+        arguments: ["@monolog.logger.hivatali_kapu"]
+        calls:
+            - [setPath, ["%hivatali_kapu.resources_path%"]]
+        tags:
+            - {name: kernel.event_subscriber}
