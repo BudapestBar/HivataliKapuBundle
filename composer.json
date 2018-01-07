@@ -1,5 +1,5 @@
 {
-    "name" : "BudapestBar/HivataliKapuBundle",
+    "name" : "budapestbar/hivatalikapu-bundle",
     "description" : "Hivatali kapu kliens bunlde",
     "type" : "symfony-bundle",
     "authors" : [{
