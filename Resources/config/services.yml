@@ -25,6 +25,11 @@ services:
         public: true
         arguments: ['@BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Client', "BUK01", "BUK01", "YhEGV9wj"]
 
+    BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\UjDokumentumokFeltolteseGepiInterfeszAltal:
+        public: true
+
+    hivatali_kapu.dokumentumkuldes:
+        alias: BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\UjDokumentumokFeltolteseGepiInterfeszAltal
     
     BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\EventListener\HivataliKapuSubscriber:
         arguments: ["@monolog.logger.hivatali_kapu"]
