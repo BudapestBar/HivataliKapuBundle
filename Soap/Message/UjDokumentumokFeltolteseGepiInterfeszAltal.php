@@ -130,6 +130,7 @@ final class UjDokumentumokFeltolteseGepiInterfeszAltal extends BaseMessage
 
 				break;
 			case Recipient::HIVATAL:
+			case Recipient::CEGKAPU:
 				
 					$nodeName = "hkp:KRID";
 

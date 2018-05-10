@@ -11,6 +11,7 @@ class Recipient
 
 	const HIVATAL 		= 'Hivatal';
 	const ALLAMPOLGAR 	= 'Allampolgar';
+	const CEGKAPU 		= 'Cegkapu';
 
 	protected $azonosito;
 	protected $tipus;
@@ -34,7 +35,7 @@ class Recipient
 	
 	public function __construct($azonosito, $tipus) {
 
-		if (!in_array($tipus, [self::ALLAMPOLGAR, self::HIVATAL])) {
+		if (!in_array($tipus, [self::ALLAMPOLGAR, self::HIVATAL, self::CEGKAPU])) {
 
 			throw new \Exception("Invalid message recipient type", 1);
 			
