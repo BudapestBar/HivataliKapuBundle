@@ -155,6 +155,8 @@ class Client
         $this->eventDispatcher->dispatch(HivataliKapuEvents::HKP_API_CONNECTION, new ConnectionEvent($xml, $content, curl_errno($this->handler)));
 
         curl_close($this->handler);
+		
+        $this->handler = false;
 
         return $this->parseResponse($content);
 
