@@ -14,12 +14,17 @@ services:
         arguments: 
             $url: "%hivatali_kapu.url%"
 
-
     BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\Azonositas:
         public: true
 
+    hivatali_kapu.azonositas:
+        alias: BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\Azonositas
+
     BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\Viszontazonositas:
         public: true
+
+    hivatali_kapu.viszontazonositas:
+        alias: BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\Viszontazonositas
 
     BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\TrKodEllenorzes:
         public: true

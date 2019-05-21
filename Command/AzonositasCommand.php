@@ -13,6 +13,8 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 use Symfony\Component\Console\Helper\Table;
 
+use AppBundle\Entity\Kamara;
+
 class AzonositasCommand extends ContainerAwareCommand {
 
 	protected function configure()
@@ -20,15 +22,17 @@ class AzonositasCommand extends ContainerAwareCommand {
         $this
             ->setName('hivatalikapu:api:azonositas')
             ->setDescription('Allampolgar azonositasa')
-        //    ->addArgument('id', InputArgument::REQUIRED, 'Adatbázis id')
+            ->addArgument('id', InputArgument::REQUIRED, 'Adatbázis id')
         ;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         
-        $service = $this->getContainer()->get("hivatali_kapu.azonositas");
+        $service        = $this->getContainer()->get("hivatali_kapu.azonositas");
+        $kamara         = $this->getContainer()->get('doctrine')->getRepository(Kamara::class)->find(1);
 
+        $service->setHivatal($kamara);
 
         $message = new AzonositasMessage();
 
@@ -54,7 +58,7 @@ class AzonositasCommand extends ContainerAwareCommand {
 
         $data = $service->process();
 
-        var_dump($data);
+        $output->writeln($data->getKapcsolatiKod());
         
         return;
 
