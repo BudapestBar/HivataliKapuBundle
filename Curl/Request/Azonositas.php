@@ -12,13 +12,13 @@ class Azonositas extends BaseRequest
 	{
 		
 		$response 			= [];
-		$azonositottak 		= $this->xpath->query("//hkp:Azonositott");
+		$azonositottak 		= $this->xpath->query("//hkp:AzonositasValasz")->item(0);
 
 		
 
-        if (!count($azonositottak)) {
+        if (!count($azonositottak->childNodes)) {
 
-            throw new \Exception("Ugyfelkapu nem talalhato", 1);
+            throw new \Exception("Megadott adatokkal azonosított nem található", 1);
 
         }
 
@@ -35,12 +35,6 @@ class Azonositas extends BaseRequest
 		}
 
 		return $response;
-
-		$valasz = $this->xpath->query("//hkp:AzonositasValasz")->item(0);
-
-		$data = XmlParser::toArray($valasz);
-
-		return $data;
 
 	}
 

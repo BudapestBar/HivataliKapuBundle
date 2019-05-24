@@ -5,7 +5,7 @@ namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Response;
 /**
 * 
 */
-final class HivatatalResponse {
+final class HivatalResponse {
 
 	private $krid;
 	private $nev;
@@ -37,7 +37,7 @@ final class HivatatalResponse {
         return $this;
     }
 
-    
+
 
     /**
      * @return mixed

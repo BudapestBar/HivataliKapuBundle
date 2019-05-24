@@ -110,7 +110,7 @@ http://schemas.xmlsoap.org/soap/envelope/">
 
 		if(isset($data['nev'])) {
 
-			$dataNodes[] = $this->document->createElement("hkp:NevSzures", $data['nev']);
+			$dataNodes[] = $this->document->createElement("hkp:NevSzures", htmlspecialchars($data['nev']));
 
 		}
 

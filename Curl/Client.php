@@ -79,10 +79,10 @@ class Client
 
         }
 
-        curl_setopt($this->handler, CURLOPT_VERBOSE, true);
+        curl_setopt($this->handler, CURLOPT_VERBOSE, false);
 		curl_setopt($this->handler, CURLOPT_URL, $this->url);
         curl_setopt($this->handler, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($this->handler, CURLOPT_TIMEOUT, 10);
+        curl_setopt($this->handler, CURLOPT_TIMEOUT, 20);
         curl_setopt($this->handler, CURLOPT_POST, true);
         curl_setopt($this->handler, CURLOPT_HTTPHEADER, $this->headers);
 
