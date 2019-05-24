@@ -12,23 +12,25 @@ class HivatalokLekerdezese extends BaseRequest
 	{
 		
 		$response 		= [];
-		$hivatalok 		= $this->xpath->query("//hkp:GIHivatalokLekerdezeseValasz")->item(0) ;
+		$data 			= $this->xpath->query("//hkp:GIHivatalokLekerdezeseValasz");
 
-        if (!count($hivatalok)) {
+        if ($data->length == 0) {
 
             throw new \Exception("Megadott adatokkal hivatal nem található", 1);
 
         }
 
-		foreach ($azonositottak as $azonositott) {
+		foreach ($data as $row) {
 
 			$hivatal 		= new HivatalResponse();
 
-			$hivatal->setNev($azonositott->getElementsByTagName('Nev')->item(0)->nodeValue);
-			$hivatal->setRovidNev($azonositott->getElementsByTagName('RovidNev')->item(0)->nodeValue);
-			$hivatal->setKrid($azonositott->getElementsByTagName('KRID')->item(0)->nodeValue);
+			$hivatal->setNev($row->getElementsByTagName('Nev')->item(0)->nodeValue);
+			$hivatal->setRovidNev($row->getElementsByTagName('RovidNev')->item(0)->nodeValue);
+			$hivatal->setKrid($row->getElementsByTagName('KRID')->item(0)->nodeValue);
 
 			$response[] 	= $hivatal;
+
+
 			
 		}
 
