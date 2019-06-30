@@ -120,6 +120,12 @@ http://schemas.xmlsoap.org/soap/envelope/">
 
 		}
 
+		if(isset($data['krid'])) {
+
+			$dataNodes[] = $this->document->createElement("hkp:KRID", $data['krid']);
+
+		}
+
 
 
 		foreach ($dataNodes as $dataNode) {

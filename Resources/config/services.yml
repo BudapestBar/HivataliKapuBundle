@@ -23,6 +23,9 @@ services:
     BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\Viszontazonositas:
         public: true
 
+    BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request:
+        public: true
+
     BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\HivatalokLekerdezese:
         public: true
 
