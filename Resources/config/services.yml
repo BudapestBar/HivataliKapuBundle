@@ -29,6 +29,9 @@ services:
     BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\HivatalokLekerdezese:
         public: true
 
+    BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\DokumentumokLekerdezeseGepiInterfeszAltal2:
+        public: true
+
     hivatali_kapu.viszontazonositas:
         alias: BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\Viszontazonositas
 

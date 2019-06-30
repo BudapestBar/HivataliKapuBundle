@@ -139,7 +139,7 @@ final class DokumentumokAllapota2 extends BaseMessage
 
 		$kerdesNode 	= $this->document->createElement("hkp:DokumentumAllapotKerdes");
 
-		$subNode 		= $this->document->createElement("ErkeztetesiSzamAlapjan");
+		$subNode 		= $this->document->createElement("hkp:ErkeztetesiSzamAlapjan");
 
 		if(!isset($data['ErkeztetesiSzam'])) {
 
