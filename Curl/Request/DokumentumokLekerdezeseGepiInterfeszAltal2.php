@@ -32,6 +32,7 @@ class DokumentumokLekerdezeseGepiInterfeszAltal2 extends BaseRequest
 			$dokumentum->setErkeztetesiDatum($row->getElementsByTagName('ErkeztetesiDatum')->item(0)->nodeValue);
 			$dokumentum->setMegjegyzes($row->getElementsByTagName('Megjegyzes')->item(0)->nodeValue);
 			$dokumentum->setIdopecset($row->getElementsByTagName('Idopecset')->item(0)->nodeValue);
+			$dokumentum->setFileNev($row->getElementsByTagName('FileNev')->item(0)->nodeValue);
 
 			$response[] 	= $dokumentum;
 
