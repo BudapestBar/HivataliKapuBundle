@@ -33,6 +33,9 @@ class DokumentumokLekerdezeseGepiInterfeszAltal2 extends BaseRequest
 			$dokumentum->setMegjegyzes($row->getElementsByTagName('Megjegyzes')->item(0)->nodeValue);
 			$dokumentum->setIdopecset($row->getElementsByTagName('Idopecset')->item(0)->nodeValue);
 			$dokumentum->setFileNev($row->getElementsByTagName('FileNev')->item(0)->nodeValue);
+			$dokumentum->setDokTipusHivatal($row->getElementsByTagName('DokTipusHivatal')->item(0)->nodeValue);
+			$dokumentum->setDokTipusAzonosito($row->getElementsByTagName('DokTipusAzonosito')->item(0)->nodeValue);
+			$dokumentum->setDokTipusLeiras($row->getElementsByTagName('DokTipusLeiras')->item(0)->nodeValue);
 
 			$response[] 	= $dokumentum;
 
