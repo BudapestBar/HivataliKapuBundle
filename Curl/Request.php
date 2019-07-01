@@ -24,7 +24,6 @@ class Request
 
 	protected $response;
 	protected $attachments;
-    protected $uploadFiles;
     protected $downloadFiles;
 
 	protected $errorMessage;
@@ -40,7 +39,6 @@ class Request
         //$this->username         = $username;
         //$this->password         = $password;
 
-        $this->uploadFiles      = [];
         $this->downloadFiles    = [];
 
 	}
@@ -214,4 +212,12 @@ class Request
 
     }
 
+
+    /**
+     * @return mixed
+     */
+    public function getDownloadFiles()
+    {
+        return $this->downloadFiles;
+    }
 }
