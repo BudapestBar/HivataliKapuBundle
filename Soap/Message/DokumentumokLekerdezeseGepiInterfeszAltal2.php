@@ -237,6 +237,14 @@ http://schemas.xmlsoap.org/soap/envelope/">
 
       $dataNodes     = array();
 
+      if (isset($data['FeladoTipusa'])) {
+
+
+         $dataNodes[] = $this->document->createElement("hkp:FeladoTipusa", $data['FeladoTipusa']);
+
+
+      }
+
       if (isset($data['EredmenyekSzama'])) {
 
 
@@ -249,14 +257,6 @@ http://schemas.xmlsoap.org/soap/envelope/">
 
 
          $dataNodes[] = $this->document->createElement("hkp:DokumentumTipusAzonosito", $data['DokumentumTipusAzonosito']);
-
-
-      }
-
-      if (isset($data['FeladoTipusa'])) {
-
-
-         $dataNodes[] = $this->document->createElement("hkp:FeladoTipusa", $data['FeladoTipusa']);
 
 
       }

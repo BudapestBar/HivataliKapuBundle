@@ -5,7 +5,7 @@ namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Response;
 /**
 * 
 */
-final class HivatalResponse {
+final class HivatalResponse extends FeladoResponse {
 
 	private $krid;
 	private $nev;

@@ -5,7 +5,7 @@ namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Response;
 /**
 * 
 */
-final class AzonositasResponse {
+final class AzonositasResponse extends FeladoResponse {
 
 	private $kapcsolatiKod;
 	private $nev;
@@ -82,4 +82,6 @@ final class AzonositasResponse {
 
         return $this;
     }
+
+
 }
