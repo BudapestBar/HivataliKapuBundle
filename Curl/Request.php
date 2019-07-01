@@ -80,6 +80,8 @@ class Request
 
 		$this->document->loadXML($this->response);
 
+        
+
 		$this->xpath = new XmlParser($this->document);
 
 		if ($this->xpath->query("//iop:HibaUzenet")->length != 0) {

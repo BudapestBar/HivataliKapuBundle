@@ -147,6 +147,8 @@ final class DokumentumokAllapota2 extends BaseMessage
 			
 
 		}
+      
+      $dataNodes     = array();
 
 		$dataNodes[] = $this->document->createElement("hkp:ErkeztetesiSzam", $data['ErkeztetesiSzam']);
 		

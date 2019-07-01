@@ -173,7 +173,7 @@ class Client
         $response 		= null;
         $attachments 	= array();
 
-		$line = strstr($body,"\n",true);
+        $line = trim(strstr($body,"\n",true));
 
         if(strpos($line, '--') === 0) {
             
@@ -194,13 +194,13 @@ class Client
 
                 list($header, $binary) = preg_split("/\R\R/m", $part, 2);
 
-                if (stripos($header, "Content-Disposition") !== false) {
+                $filename = [];
 
-                    preg_match("/Content-ID: <(\d*)>/m", $header, $filename);
+                preg_match("/Content-ID: <(\d*)>/m", $header, $filename);
 
-                    $filename = $filename[1];
+                if (count($filename)) {
 
-                    $attachments[$filename] = utf8_encode($binary);
+                    $attachments[end($filename)] = utf8_encode($binary);
 
                 }
                 else {
@@ -215,11 +215,10 @@ class Client
         }
         else {
 
-        	$response = $body;
+    	   $response = $body;
 
         }
 
         return array($response, $attachments);
-
 	}
 }

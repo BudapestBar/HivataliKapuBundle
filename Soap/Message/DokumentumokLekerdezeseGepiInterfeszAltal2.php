@@ -54,7 +54,6 @@ http://schemas.xmlsoap.org/soap/envelope/">
 
 
 
-
 // ------------
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -236,7 +235,9 @@ http://schemas.xmlsoap.org/soap/envelope/">
 
 		$subNode 		= $this->document->createElement("hkp:PostafiokAlapjan");
 
-      if (isset($dataNodes['EredmenyekSzama'])) {
+      $dataNodes     = array();
+
+      if (isset($data['EredmenyekSzama'])) {
 
 
          $dataNodes[] = $this->document->createElement("hkp:EredmenyekSzama", $data['EredmenyekSzama']);
@@ -244,7 +245,7 @@ http://schemas.xmlsoap.org/soap/envelope/">
 
       }
 
-      if (isset($dataNodes['DokumentumTipusAzonosito'])) {
+      if (isset($data['DokumentumTipusAzonosito'])) {
 
 
          $dataNodes[] = $this->document->createElement("hkp:DokumentumTipusAzonosito", $data['DokumentumTipusAzonosito']);
@@ -252,7 +253,7 @@ http://schemas.xmlsoap.org/soap/envelope/">
 
       }
 
-      if (isset($dataNodes['FeladoTipusa'])) {
+      if (isset($data['FeladoTipusa'])) {
 
 
          $dataNodes[] = $this->document->createElement("hkp:FeladoTipusa", $data['FeladoTipusa']);
