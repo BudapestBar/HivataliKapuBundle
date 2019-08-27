@@ -52,7 +52,7 @@ final class Attachment
 		$this->valaszTitkositas 	= $options['ValaszTitkositas'] ?? false;
 		$this->rendszerUzenet 		= $options['RendszerUzenet'] ?? false;
 		$this->eTertiveveny 		= $options['ETertiveveny'] ?? false;
-		$this->lenyomat 			= $options['Lenyomat'] ?? sha1($file->read());
+		$this->lenyomat 			= $options['Lenyomat'] ?? hash('sha256', $file->read());
 
 	}
 
