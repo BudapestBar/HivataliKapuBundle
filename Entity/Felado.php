@@ -1,6 +1,6 @@
 <?php
 
-namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Entity;
+namespace Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\Criteria;
@@ -31,7 +31,7 @@ class Felado
     protected $nev;
 
     /**
-     * @ORM\OneToMany(targetEntity="BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Entity\Dokumentum", mappedBy="Felado", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity="Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Entity\Dokumentum", mappedBy="Felado", orphanRemoval=true)
      */
     protected $Dokumentumok;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Model;
+namespace Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Model;
 
 
 interface HivatalakiKapuHivatalInterface {

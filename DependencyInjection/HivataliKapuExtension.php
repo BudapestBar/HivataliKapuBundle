@@ -1,6 +1,6 @@
 <?php
 
-namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\DependencyInjection;
+namespace Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\DefinitionDecorator;

@@ -1,6 +1,6 @@
 <?php
 
-namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Controller;
+namespace Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 
@@ -8,18 +8,18 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
-use \BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\XmlParser;
+use \Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Curl\XmlParser;
 
-use \BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Entity\AllampolgarFelado;
-use \BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Entity\HivatalFelado;
-use \BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Entity\Dokumentum;
-use \BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Entity\Nyomtatvany;
+use \Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Entity\AllampolgarFelado;
+use \Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Entity\HivatalFelado;
+use \Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Entity\Dokumentum;
+use \Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Entity\Nyomtatvany;
 
-use \BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Resque\Job\StoreBoritekJob;
-use \BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Exception\ApiException;
+use \Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Resque\Job\StoreBoritekJob;
+use \Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Exception\ApiException;
 
-use \BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\GIPostaFiokLekerdezes as PostafiokService;
-use \BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\DokumentumokLekerdezeseGepiInterfeszAltal as DokumentumService;
+use \Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Curl\GIPostaFiokLekerdezes as PostafiokService;
+use \Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Curl\DokumentumokLekerdezeseGepiInterfeszAltal as DokumentumService;
 
 class ApiController extends Controller
 {
@@ -55,7 +55,7 @@ class ApiController extends Controller
 
     /**
      * @Route("/api/call/dokumentum_lekerdezes")
-     * @Template("BudapestBarHivataliKapuBundle::Api:teszt.html.twig")
+     * @Template("ThinkbigHivataliKapuBundle::Api:teszt.html.twig")
      */
     public function dokumentumAction()
     {
@@ -81,7 +81,7 @@ class ApiController extends Controller
 
     /**
      * @Route("/api/call/dokumentum_visszaigazolas")
-     * @Template("BudapestBarHivataliKapuBundle:Api:postafiok.html.twig")
+     * @Template("ThinkbigHivataliKapuBundle:Api:postafiok.html.twig")
      */
     public function visszaigazolasAction(Request $request)
     {

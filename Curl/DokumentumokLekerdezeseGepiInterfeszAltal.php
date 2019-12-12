@@ -1,15 +1,15 @@
 <?php
 
-namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl;
+namespace Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Curl;
 
 use Doctrine\ORM\EntityManager;
 
-use \BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Entity\AllampolgarFelado;
-use \BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Entity\HivatalFelado;
-use \BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Entity\Dokumentum;
-use \BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Entity\Nyomtatvany;
+use \Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Entity\AllampolgarFelado;
+use \Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Entity\HivatalFelado;
+use \Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Entity\Dokumentum;
+use \Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Entity\Nyomtatvany;
 
-use \BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Resque\Job\StoreBoritekJob;
+use \Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Resque\Job\StoreBoritekJob;
 
 class DokumentumokLekerdezeseGepiInterfeszAltal extends Request
 {
@@ -205,7 +205,7 @@ class DokumentumokLekerdezeseGepiInterfeszAltal extends Request
 
             if (isset($boritek['ns12:Felado']['ns12:AllampolgarFelado'])) {
 
-                if (!$felado = $this->em->getRepository('BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Entity\AllampolgarFelado')->findOneBy(array('kapcsolatikod' => $boritek['ns12:Felado']['ns12:AllampolgarFelado']['ns12:KapcsolatiKod']))) {
+                if (!$felado = $this->em->getRepository('Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Entity\AllampolgarFelado')->findOneBy(array('kapcsolatikod' => $boritek['ns12:Felado']['ns12:AllampolgarFelado']['ns12:KapcsolatiKod']))) {
 
                     $felado = new AllampolgarFelado();
                     $felado->setKapcsolatiKod($boritek['ns12:Felado']['ns12:AllampolgarFelado']['ns12:KapcsolatiKod']);
@@ -219,7 +219,7 @@ class DokumentumokLekerdezeseGepiInterfeszAltal extends Request
             }
             elseif(isset($boritek['ns12:Felado']['ns12:HivatalFelado'])) {
 
-                if (!$felado = $this->em->getRepository('BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Entity\HivatalFelado')->findOneBy(array('krId' => $boritek['ns12:Felado']['ns12:HivatalFelado']['ns12:KRID']))) {
+                if (!$felado = $this->em->getRepository('Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Entity\HivatalFelado')->findOneBy(array('krId' => $boritek['ns12:Felado']['ns12:HivatalFelado']['ns12:KRID']))) {
 
                     $felado = new HivatalFelado();
 
@@ -231,7 +231,7 @@ class DokumentumokLekerdezeseGepiInterfeszAltal extends Request
 
             }
 
-            if (!$dokumentum = $this->em->getRepository('BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Entity\Dokumentum')->findOneBy(array('erkeztetesiSzam' => $boritek['ns12:ErkeztetesiSzam']))) {
+            if (!$dokumentum = $this->em->getRepository('Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Entity\Dokumentum')->findOneBy(array('erkeztetesiSzam' => $boritek['ns12:ErkeztetesiSzam']))) {
 
                 $dokumentum = new Dokumentum();
 

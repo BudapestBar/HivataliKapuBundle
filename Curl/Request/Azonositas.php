@@ -1,9 +1,9 @@
 <?php
 
-namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request;
+namespace Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request;
 
-use BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Response\AzonositasResponse;
-use BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request as BaseRequest;
+use Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Response\AzonositasResponse;
+use Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request as BaseRequest;
 
 class Azonositas extends BaseRequest
 {

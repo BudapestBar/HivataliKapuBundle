@@ -1,9 +1,9 @@
 <?php
 
 // src/Acme/DemoBundle/Command/GreetCommand.php
-namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Command;
+namespace Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Command;
 
-use BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Message\Azonositas as AzonositasMessage;
+use Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Message\Azonositas as AzonositasMessage;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;

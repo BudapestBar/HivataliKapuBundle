@@ -1,9 +1,9 @@
 <?php
 
-namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Soap;
+namespace Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Soap;
 
 
-use BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Soap\XmlParser;
+use Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Soap\XmlParser;
 
 /**
 * 

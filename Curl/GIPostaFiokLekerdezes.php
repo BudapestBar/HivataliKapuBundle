@@ -1,6 +1,6 @@
 <?php
 
-namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl;
+namespace Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Curl;
 
 class GIPostaFiokLekerdezes extends Request
 {

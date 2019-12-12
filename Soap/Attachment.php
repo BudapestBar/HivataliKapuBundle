@@ -1,6 +1,6 @@
 <?php
 
-namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Soap;
+namespace Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Soap;
 
 use League\Flysystem\File;
 

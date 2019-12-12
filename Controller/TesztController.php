@@ -1,6 +1,6 @@
 <?php
 
-namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Controller;
+namespace Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 
@@ -8,13 +8,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
-use \BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\XmlParser;
+use \Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Curl\XmlParser;
 
 class TesztController extends Controller
 {
     /**
      * @Route("/parse")
-     * @Template("BudapestBarHivataliKapuBundle:Api:postafiok.html.twig")
+     * @Template("ThinkbigHivataliKapuBundle:Api:postafiok.html.twig")
      */
     public function tesztAction()
     {

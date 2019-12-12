@@ -1,6 +1,6 @@
 <?php
 
-namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Entity;
+namespace Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\Criteria;
@@ -28,7 +28,7 @@ class Nyomtatvany
     protected $id;
 
     /**
-     * @ORM\OneToOne(targetEntity="BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Entity\Dokumentum", inversedBy="Nyomtatvany")
+     * @ORM\OneToOne(targetEntity="Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Entity\Dokumentum", inversedBy="Nyomtatvany")
      */
     protected $Dokumentum;
 

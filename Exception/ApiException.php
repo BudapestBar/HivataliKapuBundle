@@ -1,6 +1,6 @@
 <?php
 
-namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Exception;
+namespace Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Exception;
 
 /**
 * 

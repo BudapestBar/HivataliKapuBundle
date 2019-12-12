@@ -1,11 +1,11 @@
 <?php
 
-namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Resque\Job;
+namespace Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Resque\Job;
 
 use ResqueBundle\ContainerAwareJob;
 
-use BudapestBar\Bundle\Iroda\BeszamoloBundle\Resque\Job\ImportBeszamoloJob;
-use \BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Entity\Nyomtatvany;
+use Thinkbig\Bundle\Iroda\BeszamoloBundle\Resque\Job\ImportBeszamoloJob;
+use \Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Entity\Nyomtatvany;
 
 class DecryptJob extends ContainerAwareJob
 {
@@ -30,7 +30,7 @@ class DecryptJob extends ContainerAwareJob
         $resque     = $this->getContainer()->get('bcc_resque.resque');
         $em         = $this->getContainer()->get('doctrine')->getManager("hivatali_kapu");
 
-        $dokumentum = $em->getRepository('BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Entity\Dokumentum')->findOneBy(array('erkeztetesiSzam' => $id));
+        $dokumentum = $em->getRepository('Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Entity\Dokumentum')->findOneBy(array('erkeztetesiSzam' => $id));
 
 
         $file = $this->getContainer()->getParameter('hivatali_kapu.resources_path')."/Encrypted/{$id}.kr";

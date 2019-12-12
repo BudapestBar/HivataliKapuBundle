@@ -1,6 +1,6 @@
 <?php
 
-namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Response;
+namespace Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Response;
 
 /**
 * 

@@ -1,12 +1,12 @@
 <?php
 
 // src/Acme/DemoBundle/Command/GreetCommand.php
-namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Command;
+namespace Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Command;
 
-use BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Message\UjDokumentumokFeltolteseGepiInterfeszAltal as FeltoltesMessage;
+use Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Message\UjDokumentumokFeltolteseGepiInterfeszAltal as FeltoltesMessage;
 
-use BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Attachment;
-use BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Recipient;
+use Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Attachment;
+use Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Recipient;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;

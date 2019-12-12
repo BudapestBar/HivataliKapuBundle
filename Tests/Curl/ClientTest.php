@@ -1,8 +1,8 @@
 <?php
 
-namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Tests\Curl;
+namespace Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Tests\Curl;
 
-use BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Client;
+use Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Client;
 
 class ClientTest extends \PHPUnit_Framework_TestCase
 {

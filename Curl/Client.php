@@ -1,9 +1,9 @@
 <?php
 
-namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl;
+namespace Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Curl;
 
-use BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Event\HivataliKapuEvents;
-use BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Event\ConnectionEvent;
+use Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Event\HivataliKapuEvents;
+use Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Event\ConnectionEvent;
 
 use League\Flysystem\File;
 

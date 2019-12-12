@@ -1,10 +1,10 @@
 <?php
 
-namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Resque\Job;
+namespace Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Resque\Job;
 
 use BCC\ResqueBundle\ContainerAwareJob;
-use \BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Entity\Dokumentum;
-use \BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Entity\Nyomtatvany;
+use \Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Entity\Dokumentum;
+use \Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Entity\Nyomtatvany;
 
 class StoreBoritekJob extends ContainerAwareJob
 {
@@ -31,7 +31,7 @@ class StoreBoritekJob extends ContainerAwareJob
             
         }
 
-    	$dokumentum = $em->getRepository('BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Entity\Dokumentum')->findOneBy(array('erkeztetesiSzam' => $id));
+    	$dokumentum = $em->getRepository('Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Entity\Dokumentum')->findOneBy(array('erkeztetesiSzam' => $id));
 
     	if (!$dokumentum) {
 

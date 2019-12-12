@@ -1,11 +1,11 @@
 <?php
 
-namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\EventListener;
+namespace Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\EventListener;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
-use BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Event\ConnectionEvent;
-use BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Event\HivataliKapuEvents;
+use Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Event\ConnectionEvent;
+use Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Event\HivataliKapuEvents;
 
 class HivataliKapuSubscriber implements EventSubscriberInterface
 {

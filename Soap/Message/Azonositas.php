@@ -1,8 +1,8 @@
 <?php
 
-namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Message;
+namespace Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Message;
 
-use BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Message as BaseMessage;
+use Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Message as BaseMessage;
 
 /**
 * 

@@ -1,10 +1,10 @@
 <?php
 
-namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Message;
+namespace Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Message;
 
-use BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Message as BaseMessage;
-use BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Recipient;
-use BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Allampolgar;
+use Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Message as BaseMessage;
+use Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Recipient;
+use Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Allampolgar;
 
 
 /**

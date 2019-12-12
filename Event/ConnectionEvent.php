@@ -1,6 +1,6 @@
 <?php
 
-namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Event;
+namespace Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Event;
 
 use Symfony\Component\EventDispatcher\Event;
 

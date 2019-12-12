@@ -1,10 +1,10 @@
 {
-    "name" : "budapestbar/hivatalikapu-bundle",
+    "name" : "Thinkbig/hivatalikapu-bundle",
     "description" : "Hivatali kapu kliens bunlde",
     "type" : "symfony-bundle",
     "authors" : [{
         "name" : "Borbély Gábor",
-        "email" : "gabor.borbely@bpbar.hu"
+        "email" : "gabor@thinkbig.hu"
     }],
     "keywords" : [
         "hivatalikapu client bundle"
@@ -16,10 +16,10 @@
     },
     "autoload" : {
         "psr-0" : {
-            "BudapestBar\\Bundle\\HivataliKapu\\HivataliKapuBundle" : ""
+            "Thinkbig\\Bundle\\HivataliKapu\\HivataliKapuBundle" : ""
         }
     },
-    "target-dir" : "BudapestBar/Bundle/HivataliKapu/HivataliKapuBundle",
+    "target-dir" : "Thinkbig/Bundle/HivataliKapu/HivataliKapuBundle",
     "repositories" : [{
     }],
     "extra" : {

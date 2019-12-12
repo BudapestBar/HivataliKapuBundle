@@ -1,13 +1,13 @@
 <?php
 
-namespace BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl;
+namespace Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Curl;
 
-use BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Message;
-use BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Client;
+use Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Soap\Message;
+use Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Client;
 
-use BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Soap\XmlParser;
+use Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Soap\XmlParser;
 
-use BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Model\HivatalakiKapuHivatalInterface;
+use Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Model\HivatalakiKapuHivatalInterface;
 
 class Request
 {

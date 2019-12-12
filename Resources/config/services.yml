@@ -8,44 +8,44 @@ services:
         public: false
 
     
-    BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Client:
+    Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Client:
         shared: false
         public: false
         arguments: 
             $url: "%hivatali_kapu.url%"
 
-    BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\Azonositas:
+    Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\Azonositas:
         public: true
 
     hivatali_kapu.azonositas:
-        alias: BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\Azonositas
+        alias: Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\Azonositas
 
-    BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\Viszontazonositas:
+    Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\Viszontazonositas:
         public: true
 
-    BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request:
+    Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request:
         public: true
 
-    BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\HivatalokLekerdezese:
+    Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\HivatalokLekerdezese:
         public: true
 
-    BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\DokumentumokLekerdezeseGepiInterfeszAltal2:
+    Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\DokumentumokLekerdezeseGepiInterfeszAltal2:
         public: true
 
     hivatali_kapu.viszontazonositas:
-        alias: BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\Viszontazonositas
+        alias: Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\Viszontazonositas
 
-    BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\TrKodEllenorzes:
+    Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\TrKodEllenorzes:
         public: true
-        arguments: ['@BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Client', "BUK01", "BUK01", "YhEGV9wj"]
+        arguments: ['@Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Client', "BUK01", "BUK01", "YhEGV9wj"]
 
-    BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\UjDokumentumokFeltolteseGepiInterfeszAltal:
+    Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\UjDokumentumokFeltolteseGepiInterfeszAltal:
         public: true
 
     hivatali_kapu.dokumentumkuldes:
-        alias: BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\UjDokumentumokFeltolteseGepiInterfeszAltal
+        alias: Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\Curl\Request\UjDokumentumokFeltolteseGepiInterfeszAltal
     
-    BudapestBar\Bundle\HivataliKapu\HivataliKapuBundle\EventListener\HivataliKapuSubscriber:
+    Thinkbig\Bundle\HivataliKapu\HivataliKapuBundle\EventListener\HivataliKapuSubscriber:
         arguments: ["@monolog.logger.hivatali_kapu"]
         calls:
             - [setPath, ["%hivatali_kapu.resources_path%"]]
