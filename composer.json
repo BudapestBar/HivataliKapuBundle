@@ -1,5 +1,5 @@
 {
-    "name" : "Thinkbig/hivatalikapu-bundle",
+    "name" : "thinkbig/hivatalikapu-bundle",
     "description" : "Hivatali kapu kliens bunlde",
     "type" : "symfony-bundle",
     "authors" : [{
